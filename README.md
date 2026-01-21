@@ -2,9 +2,9 @@
 
 This project bridges a Shelly Pro 3EM to a Fronius Inverter (Symo 8.2-3-M) by simulating a SunSpec-compliant Modbus TCP Smart Meter.
 
-This project was generated with the help of AI ( Gemini ) 
+This project was generated with the help of AI ( Gemini ).
 
-This project is an inspiration of the project [cidema's work](https://github.com/ciedema/froniusmodbusimulation)
+This project is an inspiration of the project [cidema's work](https://github.com/ciedema/froniusmodbusimulation).
 
 ## Features
 - **Asynchronous Data Fetching**: Prevents the "No connection to the meter" timeout on the Fronius dashboard.
@@ -56,4 +56,18 @@ systemctl enable shelly-fronius.service
 systemctl start shelly-fronius.service
 ```
 
-
+### 6. Fronius inverter
+1. Log in as "service"
+2. Go to settings > MODBUS & setup:
+- Data export via Modbus = TCP
+- Modbus port = 502
+- String control address offset = 101
+- Sunspec Model Type = int + SF ( not float )
+- Demo mode = unchecked
+- Inverter control via Modbus = checked
+- Restrict the control = unchecked
+- save
+3. Go to settings > METTER & setup:
+- Primary metter : "Fronius Smart Metter (TCP)"
+- Settings: Location of the metter ( in my case "Feed in point" ) + IP of the server + port (502)
+- save
