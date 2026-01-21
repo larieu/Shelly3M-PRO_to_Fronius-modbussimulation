@@ -1,6 +1,7 @@
 # Shelly3M-PRO_to_Fronius-modbussimulation
 
 This project bridges a Shelly Pro 3EM to a Fronius Inverter (Symo 8.2-3-M) by simulating a SunSpec-compliant Modbus TCP Smart Meter.
+This progect was generated with the help of AI ( Gemini ) 
 
 ## Features
 - **Asynchronous Data Fetching**: Prevents the "No connection to the meter" timeout on the Fronius dashboard.
