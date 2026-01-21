@@ -1,0 +1,11 @@
+{
+    "shelly": {
+        "ip": "10.10.x.x",
+        "user": "admin",
+        "pass": "your_password"
+    },
+    "modbus": {
+        "listen_ip": "0.0.0.0",
+        "port": 502
+    }
+}

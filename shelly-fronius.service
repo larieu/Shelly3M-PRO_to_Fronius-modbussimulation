@@ -1,0 +1,16 @@
+[Unit]
+Description=Shelly Pro 3EM to Fronius Modbus Bridge
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/shelly-fronius
+# Path to the python inside your venv
+ExecStart=/opt/shelly-fronius/venv/bin/python3 /opt/shelly-fronius/3EMFroniusMeter.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+

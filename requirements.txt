@@ -1,0 +1,2 @@
+pymodbus==3.5.4
+httpx==0.26.0
