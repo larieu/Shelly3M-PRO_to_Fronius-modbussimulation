@@ -16,7 +16,7 @@ This project bridges a Shelly Pro 3EM to a Fronius Inverter (Symo 8.2-3-M) by si
 
 ### 2. Installation
 Create the directory and set up the virtual environment:
-\`\`\`bash
+```bash
 mkdir -p /opt/shelly-fronius
 cd /opt/shelly-fronius
 
@@ -25,31 +25,31 @@ cd /opt/shelly-fronius
 python3 -m venv venv
 source venv/bin/activate
 pip install pymodbus httpx
-\`\`\`
+```
 
 ### 3. Configuration
 Copy the example config and fill in your Shelly IP and credentials:
-\`\`\`bash
+```bash
 cp config.json.example config.json
 nano config.json
-\`\`\`
+```
 
 
 ### 4. Firewall Setup (CentOS/RHEL/Fedora)
 If you have a firewall you'll need to open the port:
-\`\`\`bash
+```bash
 firewall-cmd --permanent --add-port=502/tcp
 firewall-cmd --reload
-\`\`\`
+```
 
 ### 5. Systemd Service
 To ensure the script starts on boot and restarts on failure:
-1. Copy the \`shelly-fronius.service\` file to \`/etc/systemd/system/\`.
+1. Copy the `shelly-fronius.service` file to `/etc/systemd/system/`.
 2. Enable and start:
-\`\`\`bash
+```bash
 systemctl daemon-reload
 systemctl enable shelly-fronius.service
 systemctl start shelly-fronius.service
-\`\`\`
+```
 
 
