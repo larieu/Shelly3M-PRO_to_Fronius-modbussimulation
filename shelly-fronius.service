@@ -7,10 +7,9 @@ Type=simple
 User=root
 WorkingDirectory=/opt/shelly-fronius
 # Path to the python inside your venv
-ExecStart=/opt/shelly-fronius/venv/bin/python3 /opt/shelly-fronius/3EMFroniusMeter.py
+ExecStart=/opt/shelly-fronius/venv/bin/python3 /opt/shelly-fronius/shelly_master.py
 Restart=always
 RestartSec=5
 
 [Install]
 WantedBy=multi-user.target
-

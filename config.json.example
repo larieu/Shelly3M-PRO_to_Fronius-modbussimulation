@@ -1,11 +1,9 @@
 {
-    "shelly": {
-        "ip": "10.10.x.x",
-        "user": "admin",
-        "pass": "your_password"
-    },
-    "modbus": {
-        "listen_ip": "0.0.0.0",
-        "port": 502
-    }
+    "url": "http://10.10.36.25",
+    "username": "admin",
+    "password": "MySecretPass",
+    "shelly_em_id": 0,
+    "modbus_port": 502,
+    "update_interval": 1.0,
+    "log_level": "WARNING"
 }
